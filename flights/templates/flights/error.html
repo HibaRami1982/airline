@@ -1,0 +1,7 @@
+{% extends "flights/layout.html" %}
+
+{% block content %}
+  <h1 style="color:red;">⚠️Wrong</h1>
+  <p>{{ message }}</p>
+  <a href="{% url 'flights:index' %}">Home</a>
+{% endblock %}

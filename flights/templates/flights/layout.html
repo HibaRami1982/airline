@@ -1,0 +1,26 @@
+
+{% load static %}
+{% load tz %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Airline Flights{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'flights/style.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{% url 'flights:index' %}">Home</a>
+            <a href="{% url 'flights:passengers' %}">Passengers</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+     <p><sub> {% now "d M Y H:i" %} &copy;Airline</sub></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{% extends "flights/layout.html" %}
+
+{% block content %}
+    <h1>Passengers</h1>
+  {% if passengers %}
+    <h2>Passengers</h2>
+    <ul>
+      {% for passenger in passengers %}
+        <li>{{ passenger.first }} {{ passenger.last }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No passengers.</p>
+  {% endif %}
+{% endblock %}
